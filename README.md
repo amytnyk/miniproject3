@@ -18,6 +18,7 @@ while stack:
 ```
 * At the beginning stack contains coordinates of the opponents tiles
 * At each iteration we set the level value to tiles which are adjacent to any of tiles in stack
+* The stack in the next iteration will contain all modified tiles from previous iteration
 ### Placing figure
 * Let's the score of the figure be the sum of all values on the heatmap which are covered by new figure
 ```python
