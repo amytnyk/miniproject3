@@ -1,3 +1,4 @@
+[![Pylint](https://github.com/amytnyk/miniproject3/actions/workflows/pylint.yml/badge.svg)](https://github.com/amytnyk/miniproject3/actions/workflows/pylint.yml)
 ## Algorithm
 ### Introducton
 The basic idea is to surround the opponent so he won't be able to make a move. It's can be done by using heatmaps where every tile is the length of the shortest path to nearest opponents tile.
