@@ -95,7 +95,7 @@ def parse_figure() -> Field:
     """
     Parses figure from stdin
     """
-    height, width = input()[6:-1].split(' ')
+    height, _ = input()[6:-1].split(' ')
     figure = Field()
     for _ in range(int(height)):
         figure.append([int(char == '*') for char in input()])
@@ -137,7 +137,7 @@ def can_place_figure(board: Field, figure: Field, move: Move) -> bool:
         tile = get_tile(board, move[0] + row_idx, move[1] + col_idx)
         if tile is None or tile == OPPONENT:
             return False
-        elif tile:
+        if tile:
             intersect_count += 1
 
     return intersect_count == 1
