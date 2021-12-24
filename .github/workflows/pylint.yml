@@ -18,4 +18,4 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        python -m pylint *.py --disable C0103,W0703
+        python -m pylint player.py --disable C0103,W0703

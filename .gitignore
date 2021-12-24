@@ -1,2 +1,7 @@
 .idea
 __pycache__
+.filler
+results
+*.gif
+*.csv
+*.txt
