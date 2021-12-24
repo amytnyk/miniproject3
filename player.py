@@ -98,7 +98,7 @@ def cut_figure(figure: Field) -> tuple[tuple[int, int], Field]:
     """
     def is_empty_row(row: int):
         return (0 <= row < len(figure)) and all(map(lambda x: not x, figure[row]))
-    
+
     def is_empty_col(col: int):
         rotated = list(list(x) for x in zip(*figure))
         return (0 <= col < len(figure[0])) and all(map(lambda x: not x, rotated[col]))
@@ -108,7 +108,7 @@ def cut_figure(figure: Field) -> tuple[tuple[int, int], Field]:
         offset = offset[0] + 1, offset[1]
     while is_empty_col(offset[1]):
         offset = offset[0], offset[1] + 1
-    
+
     del figure[:offset[0]]
     for idx, _ in enumerate(figure):
         del figure[idx][:offset[1]]
@@ -118,7 +118,7 @@ def cut_figure(figure: Field) -> tuple[tuple[int, int], Field]:
     while is_empty_col(len(figure[0]) - 1):
         for idx, _ in enumerate(figure):
             figure[idx].pop()
-    
+
     return offset, figure
 
 

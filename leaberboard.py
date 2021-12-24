@@ -10,6 +10,7 @@ import csv
 import operator
 from os import listdir
 from os.path import isfile, join
+from multiprocessing import Pool
 
 
 def get_name(player: str) -> str:
